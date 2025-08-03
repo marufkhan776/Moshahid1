@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মানবতা কথা - মোশাহিদ আনসারীর ব্লগ</title>
+    <meta name="description" content="মোশাহিদ আনসারীর সামাজিক সচেতনতা, মানবাধিকার এবং সক্রিয়তাবাদ বিষয়ক ব্লগ">
+    
+    <!-- Google Fonts - Baloo Da 2 and Noto Sans Bengali -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --primary-color: #0e7c7b;
+            --secondary-color: #00695c;
+            --light-bg: #fdfdfd;
+            --dark-text: #111;
+            --light-text: #fdfdfd;
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans Bengali', 'Baloo Da 2', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        /* Hide all pages by default */
+        .page {
+            display: none;
+        }
+        
+        /* Show active page */
+        .page.active {
+            display: block;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--light-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-family: 'Baloo Da 2', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-bg);
+            margin-bottom: 3rem;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 25%;
+        }
+        
+        /* Blog Cards */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        
+        .card-excerpt {
+            margin-bottom: 1.5rem;
+            color: #555;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .card-link {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .card-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* About Page */
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .about-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Blog Post */
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .post-header {
+            margin-bottom: 2rem;
+        }
+        
+        .post-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .post-meta {
+            color: #777;
+            margin-bottom: 1rem;
+        }
+        
+        .post-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .post-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-text);
+            color: var(--light-bg);
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light-bg);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+        }
+        
+        /* Blog Post Content */
+        .blog-post-content {
+            display: none;
+        }
+        
+        .blog-post-content.active {
+            display: block;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--light-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-section {
+                flex-direction: column;
+            }
+            
+            .post-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo" onclick="showPage('home')">মানবতা কথা</a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">হোম</a></li>
+                    <li><a href="#" onclick="showPage('blog')">ব্লগ</a></li>
+                    <li><a href="#" onclick="showPage('about')">আমার সম্পর্কে</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1>মানবতা কথা</h1>
+                    <p>সমাজ সচেতনতা, মানবাধিকার এবং সক্রিয়তাবাদ নিয়ে আলোচনার একটি প্লাটফর্ম</p>
+                    <a href="#" class="btn" onclick="showPage('blog')">ব্লগ পড়ুন</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Posts Section -->
+        <section>
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>সাম্প্রতিক পোস্ট</h2>
+                </div>
+                <div class="blog-grid">
+                    <!-- Featured Blog Card 1 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="শিক্ষার অধিকার" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">শিক্ষার অধিকার: বাংলাদেশের প্রত্যন্ত অঞ্চলের চিত্র</h3>
+                            <p class="card-excerpt">বাংলাদেশের প্রত্যন্ত অঞ্চলে শিক্ষার অবস্থা এবং শিক্ষার অধিকার নিশ্চিত করার জন্য আমাদের করণীয় সম্পর্কে একটি বিশ্লেষণ।</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post1')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Featured Blog Card 2 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="নারী অধিকার" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">নারী অধিকার: সমাজে নারীর অবস্থান</h3>
+                            <p class="card-excerpt">বাংলাদেশে নারী অধিকার এবং সমাজে নারীর অবস্থান নিয়ে একটি গভীর আলোচনা। কীভাবে আমরা নারীদের অধিকার সুরক্ষিত করতে পারি?</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post2')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Featured Blog Card 3 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80" alt="পরিবেশ সংরক্ষণ" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">পরিবেশ সংরক্ষণ: আমাদের দায়িত্ব</h3>
+                            <p class="card-excerpt">জলবায়ু পরিবর্তন এবং পরিবেশ দূষণের প্রভাব থেকে আমাদের পরিবেশকে রক্ষা করার জন্য আমরা কী করতে পারি?</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post3')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section style="background-color: #f5f5f5; padding: 5rem 0;">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>আমাদের লক্ষ্য</h2>
+                </div>
+                <div class="about-section">
+                    <div class="about-content" data-aos="fade-right">
+                        <p>আমাদের লক্ষ্য হল সমাজের প্রতিটি মানুষের মধ্যে সচেতনতা বৃদ্ধি করা এবং মানবাধিকার সম্পর্কে জ্ঞান ছড়িয়ে দেওয়া। আমরা বিশ্বাস করি যে, সঠিক তথ্য এবং শিক্ষার মাধ্যমে আমরা একটি ন্যায়সঙ্গত সমাজ গড়ে তুলতে পারি।</p>
+                        <p>এই ব্লগের মাধ্যমে আমরা সমাজের বিভিন্ন সমস্যা, চ্যালেঞ্জ এবং সম্ভাবনা নিয়ে আলোচনা করব এবং সমাধানের পথ খুঁজব। আপনার সাথে থাকুন এই যাত্রায়।</p>
+                        <a href="#" class="btn" onclick="showPage('about')">আরও জানুন</a>
+                    </div>
+                    <div class="about-img" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Mission Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Page -->
+    <div id="blog" class="page">
+        <section>
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>সকল ব্লগ পোস্ট</h2>
+                </div>
+                <div class="blog-grid">
+                    <!-- Blog Card 1 -->
+                    <div class="blog-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="শিক্ষার অধিকার" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">শিক্ষার অধিকার: বাংলাদেশের প্রত্যন্ত অঞ্চলের চিত্র</h3>
+                            <p class="card-excerpt">বাংলাদেশের প্রত্যন্ত অঞ্চলে শিক্ষার অবস্থা এবং শিক্ষার অধিকার নিশ্চিত করার জন্য আমাদের করণীয় সম্পর্কে একটি বিশ্লেষণ।</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post1')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="blog-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="নারী অধিকার" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">নারী অধিকার: সমাজে নারীর অবস্থান</h3>
+                            <p class="card-excerpt">বাংলাদেশে নারী অধিকার এবং সমাজে নারীর অবস্থান নিয়ে একটি গভীর আলোচনা। কীভাবে আমরা নারীদের অধিকার সুরক্ষিত করতে পারি?</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post2')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="blog-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80" alt="পরিবেশ সংরক্ষণ" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">পরিবেশ সংরক্ষণ: আমাদের দায়িত্ব</h3>
+                            <p class="card-excerpt">জলবায়ু পরিবর্তন এবং পরিবেশ দূষণের প্রভাব থেকে আমাদের পরিবেশকে রক্ষা করার জন্য আমরা কী করতে পারি?</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post3')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 4 -->
+                    <div class="blog-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd59a0c3a9a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="স্বাস্থ্য সেবা" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">স্বাস্থ্য সেবা: সবার জন্য সুলভ স্বাস্থ্যসেবা</h3>
+                            <p class="card-excerpt">বাংলাদেশে স্বাস্থ্যসেবার বর্তমান অবস্থা এবং সবার জন্য সুলভ স্বাস্থ্যসেবা নিশ্চিত করার উপায় নিয়ে আলোচনা।</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post4')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 5 -->
+                    <div class="blog-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="ডিজিটাল বাংলাদেশ" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">ডিজিটাল বাংলাদেশ: প্রযুক্তির সুবিধা সবার জন্য</h3>
+                            <p class="card-excerpt">ডিজিটাল বাংলাদেশ গড়ার পথে আমাদের অগ্রগতি এবং প্রযুক্তির সুবিধা সবার কাছে পৌঁছে দেওয়ার চ্যালেঞ্জ ও সম্ভাবনা।</p>
+                            <a href="#" class="card-link" onclick="showBlogPost('post5')">আরও পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section>
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>আমার সম্পর্কে</h2>
+                </div>
+                <div class="about-section">
+                    <div class="about-img" data-aos="fade-right">
+                        <img src="https://res.cloudinary.com/dqrcddpfz/image/upload/v1754203715/b5aac460-8045-49ff-b861-d1bae29eda6c_flugub.jpg" alt="মোশাহিদ আনসারী">
+                    </div>
+                    <div class="about-content" data-aos="fade-left">
+                        <h2>মোশাহিদ আনসারী</h2>
+                        <p>মোশাহিদ আনসারী একজন সমাজকর্মী যিনি বাংলাদেশের প্রত্যন্ত অঞ্চলে সচেতনতা বৃদ্ধিতে কাজ করছেন। আমার ব্লগের মাধ্যমে আমি মানবতা, অধিকার, ও সামাজিক ন্যায়ের বিষয়ে মানুষকে জানাতে আগ্রহী।</p>
+                        <p>২০১৫ সাল থেকে আমি বিভিন্ন সামাজিক আন্দোলনের সাথে যুক্ত আছি। শিক্ষা, স্বাস্থ্য, নারী অধিকার, পরিবেশ সংরক্ষণসহ বিভিন্ন বিষয়ে আমি কাজ করে যাচ্ছি। আমার লক্ষ্য হল সমাজের প্রতিটি মানুষের মধ্যে সচেতনতা বৃদ্ধি করা এবং একটি ন্যায়সঙ্গত সমাজ গড়ে তোলা।</p>
+                        <p>এই ব্লগের মাধ্যমে আমি আমার অভিজ্ঞতা, চিন্তাভাবনা এবং গবেষণালব্ধ তথ্য শেয়ার করি। আমি আশা করি, এই ব্লগ পাঠকদের মধ্যে সামাজিক সমস্যা সম্পর্কে সচেতনতা বৃদ্ধি করবে এবং তাদের সক্রিয় অংশগ্রহণে উৎসাহিত করবে।</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Post Pages -->
+    <!-- Blog Post 1 -->
+    <div id="post1" class="page blog-post-content">
+        <section>
+            <div class="container">
+                <div class="blog-post">
+                    <div class="post-header">
+                        <h1 class="post-title">শিক্ষার অধিকার: বাংলাদেশের প্রত্যন্ত অঞ্চলের চিত্র</h1>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> ১৫ জুন, ২০২৩</span>
+                            <span><i class="far fa-user"></i> মোশাহিদ আনসারী</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="শিক্ষার অধিকার" class="post-img">
+                    <div class="post-content">
+                        <p>শিক্ষা মানুষের মৌলিক অধিকার। শিক্ষা ছাড়া কোনো জাতি উন্নতির পথে এগিয়ে যেতে পারে না। বাংলাদেশের সংবিধানে শিক্ষাকে মৌলিক অধিকার হিসেবে স্বীকৃতি দেওয়া হয়েছে। কিন্তু বাস্তবতা কি তাই? বিশেষ করে প্রত্যন্ত অঞ্চলে শিক্ষার অবস্থা কেমন?</p>
+                        
+                        <p>বাংলাদেশের প্রত্যন্ত অঞ্চলে শিক্ষার অবস্থা এখনও সন্তোষজনক নয়। অনেক এলাকায় স্কুল নেই, শিক্ষক নেই, উপযুক্ত শিক্ষা উপকরণ নেই। ফলে অনেক শিশু শিক্ষার অধিকার থেকে বঞ্চিত হচ্ছে। বিশেষ করে দরিদ্র পরিবারের শিশুরা, প্রতিবন্ধী শিশুরা, এবং দুর্গম এলাকার শিশুরা শিক্ষার সুযোগ থেকে বঞ্চিত হচ্ছে।</p>
+                        
+                        <p>আমি গত বছর বাংলাদেশের কয়েকটি প্রত্যন্ত অঞ্চল ঘুরে দেখেছি। সেখানে দেখেছি, অনেক এলাকায় স্কুল আছে কিন্তু শিক্ষক নেই। কোথাও শিক্ষক আছে কিন্তু তারা নিয়মিত স্কুলে আসেন না। কোথাও স্কুল ভবন আছে কিন্তু সেটি এতটাই জরাজীর্ণ যে সেখানে পড়াশোনা করা অসম্ভব। এসব সমস্যার কারণে অনেক শিশু স্কুলে যায় না বা স্কুল ছেড়ে দেয়।</p>
+                        
+                        <p>তবে আশার কথা হল, সরকার এবং বিভিন্ন বেসরকারি সংস্থা এই সমস্যা সমাধানে কাজ করছে। সরকার প্রাথমিক শিক্ষাকে বাধ্যতামূলক করেছে এবং বিনামূল্যে বই বিতরণ করছে। অনেক বেসরকারি সংস্থা প্রত্যন্ত অঞ্চলে স্কুল স্থাপন করছে, শিক্ষক নিয়োগ দিচ্ছে, এবং শিক্ষা উপকরণ সরবরাহ করছে।</p>
+                        
+                        <p>কিন্তু এসব উদ্যোগ যথেষ্ট নয়। আমাদের আরও অনেক কিছু করতে হবে। প্রথমত, সরকারকে শিক্ষা খাতে বরাদ্দ বাড়াতে হবে। দ্বিতীয়ত, প্রত্যন্ত অঞ্চলে আরও স্কুল স্থাপন করতে হবে এবং যোগ্য শিক্ষক নিয়োগ দিতে হবে। তৃতীয়ত, শিক্ষকদের প্রশিক্ষণ দিতে হবে এবং তাদের বেতন বাড়াতে হবে যাতে তারা মনোযোগ দিয়ে শিক্ষাদান করেন।</p>
+                        
+                        <p>পাশাপাশি, আমাদের সমাজেও শিক্ষার গুরুত্ব সম্পর্কে সচেতনতা বাড়াতে হবে। অনেক পরিবার, বিশেষ করে দরিদ্র পরিবার, শিক্ষার গুরুত্ব বুঝে না। তারা মনে করে, শিক্ষার চেয়ে আয় করা বেশি জরুরি। ফলে তারা তাদের সন্তানদের স্কুলে না পাঠিয়ে কাজে পাঠায়। এই মানসিকতা পরিবর্তন করতে হবে।</p>
+                        
+                        <p>শিক্ষা একটি জাতির মেরুদণ্ড। শিক্ষিত জনগোষ্ঠী ছাড়া কোনো দেশ উন্নতি করতে পারে না। তাই আমাদের সবাইকে মিলে কাজ করতে হবে যাতে প্রতিটি শিশু শিক্ষার অধিকার পায়। সরকার, বেসরকারি সংস্থা, এবং সাধারণ মানুষ - সবাইকে এই কাজে এগিয়ে আসতে হবে।</p>
+                        
+                        <p>আমি আশা করি, আমরা সবাই মিলে একদিন এমন একটি বাংলাদেশ গড়ে তুলব যেখানে প্রতিটি শিশু শিক্ষার অধিকার পাবে, কেউ শিক্ষা থেকে বঞ্চিত হবে না।</p>
+                    </div>
+                    <a href="#" class="back-link" onclick="showPage('blog')"><i class="fas fa-arrow-left"></i> ব্লগে ফিরে যান</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Post 5 -->
+    <div id="post5" class="page blog-post-content">
+        <section>
+            <div class="container">
+                <div class="blog-post">
+                    <div class="post-header">
+                        <h1 class="post-title">ডিজিটাল বাংলাদেশ: প্রযুক্তির সুবিধা সবার জন্য</h1>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> ১০ এপ্রিল, ২০২৩</span>
+                            <span><i class="far fa-user"></i> মোশাহিদ আনসারী</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="ডিজিটাল বাংলাদেশ" class="post-img">
+                    <div class="post-content">
+                        <p>ডিজিটাল বাংলাদেশ - এই শব্দটি আমরা প্রায়ই শুনি। কিন্তু এর অর্থ কী? ডিজিটাল বাংলাদেশ বলতে এমন একটি বাংলাদেশকে বোঝায় যেখানে প্রযুক্তি ব্যবহার করে জনগণের জীবনমান উন্নত করা হবে, সরকারি সেবাগুলো সহজলভ্য করা হবে, এবং দেশের অর্থনৈতিক উন্নয়ন ত্বরান্বিত করা হবে।</p>
+                        
+                        <p>বাংলাদেশ সরকার ২০০৮ সালে ডিজিটাল বাংলাদেশ গড়ার লক্ষ্য নির্ধারণ করে। সেই থেকে এ পর্যন্ত অনেক পথ পাড়ি দিয়েছে বাংলাদেশ। ইন্টারনেট ব্যবহারকারীর সংখ্যা বেড়েছে, মোবাইল ব্যাংকিং চালু হয়েছে, সরকারি অনেক সেবা অনলাইনে পাওয়া যাচ্ছে, ডিজিটাল সেন্টার স্থাপন করা হয়েছে। এগুলো নিঃসন্দেহে ইতিবাচক পরিবর্তন।</p>
+                        
+                        <p>কিন্তু এর পরেও, বাংলাদেশে ডিজিটাল বিভাজন রয়েছে। শহরাঞ্চলে যেখানে প্রযুক্তির ব্যবহার বেশি, সেখানে গ্রামাঞ্চলে এখনও অনেকেই প্রযুক্তির সুবিধা থেকে বঞ্চিত। অনেক গ্রামে ইন্টারনেট সংযোগ নেই, বিদ্যুৎ সরবরাহ অনিয়মিত, ডিজিটাল সাক্ষরতার অভাব রয়েছে। ফলে, গ্রামের মানুষ প্রযুক্তির সুবিধা পূর্ণভাবে পাচ্ছে না।</p>
+                        
+                        <p>আমি গত বছর বাংলাদেশের কয়েকটি গ্রাম ঘুরে দেখেছি। সেখানে দেখেছি, অনেক গ্রামে ইন্টারনেট সংযোগ নেই, যা আছে তাও খুব ধীর গতির। অনেক মানুষ স্মার্টফোন ব্যবহার করতে জানে না, অনলাইন সেবা সম্পর্কে জানে না। এমনকি অনেকে কম্পিউটার দেখেনি। এসব কারণে তারা ডিজিটাল বাংলাদেশের সুবিধা থেকে বঞ্চিত হচ্ছে।</p>
+                        
+                        <p>আবার, শহরাঞ্চলেও সবাই সমানভাবে প্রযুক্তির সুবিধা পাচ্ছে না। অনেক নিম্ন আয়ের মানুষ স্মার্টফোন কিনতে পারে না, ইন্টারনেট ব্যবহার করতে পারে না। অনেকে প্রযুক্তি ব্যবহারে দক্ষ নয়, ফলে তারাও ডিজিটাল সেবা থেকে বঞ্চিত হচ্ছে।</p>
+                        
+                        <p>তাহলে, আমরা কীভাবে এই সমস্যাগুলো সমাধান করতে পারি? প্রথমত, সারা দেশে উচ্চ গতির ইন্টারনেট সংযোগ নিশ্চিত করতে হবে, বিশেষ করে গ্রামাঞ্চলে। দ্বিতীয়ত, ডিজিটাল সাক্ষরতা বাড়াতে হবে। স্কুল-কলেজে কম্পিউটার শিক্ষা বাধ্যতামূলক করতে হবে, গ্রামাঞ্চলে প্রযুক্তি প্রশিক্ষণ কেন্দ্র স্থাপন করতে হবে।</p>
+                        
+                        <p>তৃতীয়ত, সাশ্রয়ী মূল্যে স্মার্টফোন ও কম্পিউটার সরবরাহ করতে হবে, যাতে নিম্ন আয়ের মানুষও সেগুলো কিনতে পারে। চতুর্থত, সরকারি সেবাগুলো আরও সহজ ও ব্যবহারবান্ধব করতে হবে, যাতে যে কেউ সহজেই সেগুলো ব্যবহার করতে পারে।</p>
+                        
+                        <p>পঞ্চমত, প্রযুক্তি ব্যবহারে নারীদের উৎসাহিত করতে হবে। বাংলাদেশে এখনও অনেক নারী প্রযুক্তি ব্যবহার করে না, কারণ তাদের পরিবার তাদের প্রযুক্তি ব্যবহার করতে উৎসাহিত করে না। এই মনোভাব পরিবর্তন করতে হবে।</p>
+                        
+                        <p>ডিজিটাল বাংলাদেশ গড়তে হলে প্রযুক্তির সুবিধা সবার কাছে পৌঁছাতে হবে, কেউ যেন বাদ না পড়ে। সরকার, বেসরকারি সংস্থা, এবং সাধারণ মানুষ - সবাইকে মিলে কাজ করতে হবে এই লক্ষ্য অর্জনে। আমি আশা করি, আমরা সবাই মিলে একদিন এমন একটি ডিজিটাল বাংলাদেশ গড়ে তুলব যেখানে প্রতিটি মানুষ প্রযুক্তির সুবিধা পাবে, কেউ পিছিয়ে থাকবে না।</p>
+                    </div>
+                    <a href="#" class="back-link" onclick="showPage('blog')"><i class="fas fa-arrow-left"></i> ব্লগে ফিরে যান</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>মানবতা কথা</h2>
+                    <p>সমাজ সচেতনতা ও মানবাধিকারের কণ্ঠস্বর</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; ২০২৩ মানবতা কথা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for page navigation -->
+    <script>
+        // Show the home page by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+        });
+
+        // Function to show a specific page and hide others
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // Show the selected page
+            document.getElementById(pageId).style.display = 'block';
+
+            // Update active state in navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Close mobile menu if open
+            const navMenu = document.querySelector('.nav-menu');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        }
+
+        // Function to show a specific blog post
+        function showBlogPost(postId) {
+            showPage(postId);
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Add animation on scroll
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৩ মানবতা কথা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Close mobile menu if open
+            navLinks.classList.remove('active');
+        }
+        
+        // Blog Post Navigation
+        function showBlogPost(postId) {
+            showPage(postId);
+        }
+    </script>
+
+
+    <!-- Blog Post 5 -->
+    <div id="post5" class="page blog-post-content">
+        <section>
+            <div class="container">
+                <div class="blog-post">
+                    <div class="post-header">
+                        <h1 class="post-title">ডিজিটাল বাংলাদেশ: প্রযুক্তির সুবিধা সবার জন্য</h1>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> ১০ ফেব্রুয়ারি, ২০২৩</span>
+                            <span><i class="far fa-user"></i> মোশাহিদ আনসারী</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="ডিজিটাল বাংলাদেশ" class="post-img">
+                    <div class="post-content">
+                        <p>ডিজিটাল বাংলাদেশ - এই শব্দটি আমরা প্রায়ই শুনি। ২০০৮ সালে বর্তমান সরকার ক্ষমতায় আসার পর থেকে ডিজিটাল বাংলাদেশ গড়ার লক্ষ্যে কাজ করে যাচ্ছে। এর ফলে বাংলাদেশে তথ্য প্রযুক্তির ব্যবহার বেড়েছে, অনলাইন সেবা বেড়েছে, ইন্টারনেট ব্যবহারকারীর সংখ্যা বেড়েছে। এগুলো নিঃসন্দেহে ইতিবাচক দিক।</p>
+                        
+                        <p>কিন্তু প্রশ্ন হল, ডিজিটাল বাংলাদেশের সুবিধা কি সবাই সমানভাবে পাচ্ছে? বিশেষ করে গ্রামাঞ্চলের মানুষ, দরিদ্র মানুষ, প্রান্তিক জনগোষ্ঠী - তারা কি ডিজিটাল বাংলাদেশের সুবিধা পাচ্ছে?</p>
+                        
+                        <p>আমি গত বছর বাংলাদেশের কয়েকটি গ্রাম ঘুরে দেখেছি। সেখানে দেখেছি, অনেক গ্রামে এখনও ইন্টারনেট সংযোগ নেই, বিদ্যুৎ সংযোগ অনিয়মিত, স্মার্টফোন বা কম্পিউটার ব্যবহার করে এমন মানুষের সংখ্যা কম। ফলে তারা ডিজিটাল সেবা থেকে বঞ্চিত হচ্ছে।</p>
+                        
+                        <p>আবার, যারা স্মার্টফোন বা কম্পিউটার ব্যবহার করে, তাদের অনেকেই ডিজিটাল সাক্ষরতার অভাবে সঠিকভাবে ডিজিটাল সেবা ব্যবহার করতে পারে না। তারা জানে না কীভাবে অনলাইনে ফর্ম পূরণ করতে হয়, কীভাবে ডিজিটাল পেমেন্ট করতে হয়, কীভাবে ই-মেইল ব্যবহার করতে হয়।</p>
+                        
+                        <p>এছাড়া, ডিজিটাল নিরাপত্তা একটি বড় সমস্যা। অনেকেই ডিজিটাল নিরাপত্তা সম্পর্কে সচেতন নয়, ফলে তারা প্রতারণার শিকার হচ্ছে। হ্যাকিং, ফিশিং, আইডেন্টিটি থেফট - এসব অপরাধ দিন দিন বাড়ছে।</p>
+                        
+                        <p>তাহলে, আমরা কীভাবে এই সমস্যাগুলো সমাধান করতে পারি? প্রথমত, সারা দেশে ইন্টারনেট সংযোগ নিশ্চিত করতে হবে, বিশেষ করে গ্রামাঞ্চলে। দ্বিতীয়ত, ডিজিটাল সাক্ষরতা বাড়াতে হবে। স্কুল-কলেজে কম্পিউটার শিক্ষা বাধ্যতামূলক করতে হবে, গ্রামাঞ্চলে ডিজিটাল সাক্ষরতা কর্মসূচি চালু করতে হবে।</p>
+                        
+                        <p>তৃতীয়ত, ডিজিটাল সেবাগুলো সহজ ও ব্যবহারবান্ধব করতে হবে, যাতে সাধারণ মানুষ সহজেই সেগুলো ব্যবহার করতে পারে। চতুর্থত, ডিজিটাল নিরাপত্তা সম্পর্কে সচেতনতা বাড়াতে হবে, সাইবার অপরাধ প্রতিরোধে কঠোর আইন প্রণয়ন করতে হবে।</p>
+                        
+                        <p>পঞ্চমত, সরকারি সেবাগুলো ডিজিটাল করতে হবে, যাতে মানুষ ঘরে বসেই সেবা পেতে পারে। এতে সময় ও অর্থ বাঁচবে, দুর্নীতি কমবে।</p>
+                        
+                        <p>ডিজিটাল বাংলাদেশ গড়ার লক্ষ্যে সরকার, বেসরকারি সংস্থা, এবং সাধারণ মানুষ - সবাইকে মিলে কাজ করতে হবে। আমরা যদি সবাই মিলে কাজ করি, তাহলে একদিন আমরা এমন একটি ডিজিটাল বাংলাদেশ গড়ে তুলতে পারব যেখানে প্রযুক্তির সুবিধা সবাই সমানভাবে পাবে, কেউ পিছিয়ে থাকবে না।</p>
+                        
+                        <p>আমি আশা করি, আমরা সবাই ডিজিটাল বাংলাদেশ গড়ার কাজে নিজেদের অবদান রাখব। কারণ, ডিজিটাল বাংলাদেশ শুধু সরকারের স্লোগান নয়, এটি আমাদের সবার স্বপ্ন, আমাদের সবার লক্ষ্য।</p>
+                    </div>
+                    <a href="#" class="back-link" onclick="showPage('blog')"><i class="fas fa-arrow-left"></i> ব্লগে ফিরে যান</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div id="post2" class="page blog-post-content">
+        <section>
+            <div class="container">
+                <div class="blog-post">
+                    <div class="post-header">
+                        <h1 class="post-title">নারী অধিকার: সমাজে নারীর অবস্থান</h1>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> ২০ মে, ২০২৩</span>
+                            <span><i class="far fa-user"></i> মোশাহিদ আনসারী</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="নারী অধিকার" class="post-img">
+                    <div class="post-content">
+                        <p>নারী ও পুরুষ সমাজের দুটি অবিচ্ছেদ্য অংশ। একটি সমাজ তখনই সুন্দরভাবে এগিয়ে যেতে পারে যখন নারী ও পুরুষ সমানভাবে অংশগ্রহণ করে। কিন্তু বাস্তবতা হল, বিশ্বের অনেক দেশেই নারীরা এখনও সমান অধিকার পায় না। বাংলাদেশও এর ব্যতিক্রম নয়।</p>
+                        
+                        <p>বাংলাদেশে নারীদের অবস্থান সম্পর্কে আলোচনা করতে গেলে আমাদের প্রথমেই বলতে হবে যে, গত কয়েক দশকে নারীদের অবস্থানের উন্নতি হয়েছে। আজ বাংলাদেশের নারীরা রাজনীতি, শিক্ষা, চিকিৎসা, ব্যবসা, খেলাধুলা, সংস্কৃতিসহ প্রায় সব ক্ষেত্রেই সফলতার সাথে কাজ করছে। বাংলাদেশের প্রধানমন্ত্রী একজন নারী, বিরোধী দলের নেতাও একজন নারী। এটি নিঃসন্দেহে একটি ইতিবাচক দিক।</p>
+                        
+                        <p>কিন্তু এর পরেও, আমাদের সমাজে নারীদের প্রতি বৈষম্য এখনও বিদ্যমান। বিশেষ করে গ্রামাঞ্চলে নারীদের অবস্থা এখনও সন্তোষজনক নয়। অনেক পরিবারে মেয়েদের শিক্ষার সুযোগ দেওয়া হয় না, বাল্যবিবাহ এখনও একটি বড় সমস্যা, নারী নির্যাতনের ঘটনা প্রতিদিন ঘটছে।</p>
+                        
+                        <p>আমি গত বছর বাংলাদেশের কয়েকটি গ্রাম ঘুরে দেখেছি। সেখানে দেখেছি, অনেক পরিবারে মেয়েদের স্কুলে পাঠানো হয় না। তারা মনে করে, মেয়েদের শিক্ষা দরকার নেই, কারণ তারা একদিন বিয়ে হয়ে চলে যাবে। এই ধরনের চিন্তাভাবনা আমাদের সমাজে এখনও বিদ্যমান।</p>
+                        
+                        <p>আবার, অনেক ক্ষেত্রে দেখা যায়, নারীরা শিক্ষিত হলেও তাদের কর্মক্ষেত্রে সমান সুযোগ দেওয়া হয় না। একই কাজের জন্য পুরুষদের তুলনায় নারীদের কম বেতন দেওয়া হয়। উচ্চ পদে নারীদের সংখ্যা এখনও কম। এছাড়া, কর্মক্ষেত্রে নারীদের প্রতি হয়রানি একটি বড় সমস্যা।</p>
+                        
+                        <p>নারী নির্যাতন আমাদের সমাজের আরেকটি বড় সমস্যা। প্রতিদিন পত্রিকায় নারী নির্যাতনের খবর প্রকাশিত হয়। ধর্ষণ, যৌন হয়রানি, পারিবারিক সহিংসতা, এসিড নিক্ষেপ - এসব ঘটনা আমাদের সমাজে প্রতিনিয়ত ঘটছে। এসব অপরাধের বিচার প্রক্রিয়া দীর্ঘসূত্রিতা এবং অনেক ক্ষেত্রে অপরাধীরা শাস্তি পায় না।</p>
+                        
+                        <p>তাহলে, আমরা কীভাবে এই সমস্যাগুলো সমাধান করতে পারি? প্রথমত, আমাদের সমাজে নারী-পুরুষ সমতা সম্পর্কে সচেতনতা বাড়াতে হবে। দ্বিতীয়ত, মেয়েদের শিক্ষার প্রতি গুরুত্ব দিতে হবে। তৃতীয়ত, নারী নির্যাতনের বিরুদ্ধে কঠোর আইন প্রণয়ন করতে হবে এবং সেই আইন কার্যকর করতে হবে। চতুর্থত, নারীদের আর্থিকভাবে স্বাবলম্বী করতে হবে।</p>
+                        
+                        <p>সরকার, বেসরকারি সংস্থা, এবং সাধারণ মানুষ - সবাইকে মিলে কাজ করতে হবে নারীদের অধিকার নিশ্চিত করতে। আমরা যদি সবাই মিলে কাজ করি, তাহলে একদিন আমরা এমন একটি সমাজ গড়ে তুলতে পারব যেখানে নারী ও পুরুষ সমান অধিকার ভোগ করবে, কেউ কারো চেয়ে কম হবে না।</p>
+                        
+                        <p>নারী অধিকার নিশ্চিত করা শুধু নারীদের জন্য নয়, এটি সমগ্র সমাজের জন্য গুরুত্বপূর্ণ। কারণ, নারীরা যখন তাদের পূর্ণ সম্ভাবনা অনুযায়ী কাজ করতে পারবে, তখন সমাজ ও দেশ দ্রুত এগিয়ে যাবে।</p>
+                    </div>
+                    <a href="#" class="back-link" onclick="showPage('blog')"><i class="fas fa-arrow-left"></i> ব্লগে ফিরে যান</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div id="post3" class="page blog-post-content">
+        <section>
+            <div class="container">
+                <div class="blog-post">
+                    <div class="post-header">
+                        <h1 class="post-title">পরিবেশ সংরক্ষণ: আমাদের দায়িত্ব</h1>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> ১০ এপ্রিল, ২০২৩</span>
+                            <span><i class="far fa-user"></i> মোশাহিদ আনসারী</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80" alt="পরিবেশ সংরক্ষণ" class="post-img">
+                    <div class="post-content">
+                        <p>পরিবেশ আমাদের জীবনের অবিচ্ছেদ্য অংশ। আমরা পরিবেশ থেকে বাতাস, পানি, খাদ্য - সবকিছু পাই। কিন্তু দুঃখজনকভাবে, আমরা আমাদের এই মূল্যবান পরিবেশকে ধ্বংস করে চলেছি। জলবায়ু পরিবর্তন, বায়ু দূষণ, পানি দূষণ, বন উজাড় - এসব সমস্যা আজ বিশ্বব্যাপী উদ্বেগের কারণ হয়ে দাঁড়িয়েছে।</p>
+                        
+                        <p>বাংলাদেশ জলবায়ু পরিবর্তনের সবচেয়ে ক্ষতিগ্রস্ত দেশগুলোর মধ্যে একটি। সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধি, লবণাক্ততা বৃদ্ধি, অনিয়মিত বৃষ্টিপাত, বন্যা, খরা - এসব সমস্যা বাংলাদেশে প্রতিনিয়ত দেখা যাচ্ছে। এসব সমস্যার কারণে লাখ লাখ মানুষ ক্ষতিগ্রস্ত হচ্ছে, তাদের জীবন-জীবিকা হুমকির মুখে পড়ছে।</p>
+                        
+                        <p>আমি গত বছর বাংলাদেশের উপকূলীয় এলাকা ঘুরে দেখেছি। সেখানে দেখেছি, সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধির কারণে অনেক এলাকা জলমগ্ন হয়ে গেছে, লোকজন বাস্তুচ্যুত হয়েছে। লবণাক্ততা বৃদ্ধির কারণে কৃষি জমিতে ফসল উৎপাদন কমে গেছে, পানীয় জলের সংকট দেখা দিয়েছে।</p>
+                        
+                        <p>আবার, শহরাঞ্চলে বায়ু দূষণ একটি বড় সমস্যা। ঢাকা শহরে বায়ু দূষণের মাত্রা বিশ্বের সবচেয়ে বেশি। এর প্রধান কারণ হল যানবাহন থেকে নির্গত ধোঁয়া, ইটভাটা থেকে নির্গত ধোঁয়া, এবং নির্মাণ কাজের ধুলাবালি। এই দূষিত বাতাস শ্বাস নিলে নানা ধরনের রোগ হতে পারে, যেমন - শ্বাসকষ্ট, হাঁপানি, ফুসফুসের রোগ, হৃদরোগ ইত্যাদি।</p>
+                        
+                        <p>পানি দূষণও একটি গুরুতর সমস্যা। শিল্প কারখানা থেকে নির্গত বর্জ্য, কৃষি কাজে ব্যবহৃত কীটনাশক ও সার, এবং বাসা-বাড়ি থেকে নির্গত বর্জ্য নদী-নালা ও পুকুরের পানি দূষিত করছে। এই দূষিত পানি পান করলে বা ব্যবহার করলে নানা ধরনের রোগ হতে পারে, যেমন - ডায়রিয়া, আমাশয়, জন্ডিস, টাইফয়েড ইত্যাদি।</p>
+                        
+                        <p>বন উজাড়ও একটি গুরুতর সমস্যা। বাংলাদেশের বনভূমি দিন দিন কমে যাচ্ছে। অবৈধ বনজ সম্পদ আহরণ, বাণিজ্যিক উদ্দেশ্যে গাছ কাটা, কৃষি জমি বাড়ানোর জন্য বন পরিষ্কার করা - এসব কারণে বনভূমি কমে যাচ্ছে। এর ফলে জীববৈচিত্র্য হুমকির মুখে পড়ছে, পরিবেশের ভারসাম্য নষ্ট হচ্ছে।</p>
+                        
+                        <p>তাহলে, আমরা কীভাবে এই সমস্যাগুলো সমাধান করতে পারি? প্রথমত, আমাদের পরিবেশ সম্পর্কে সচেতন হতে হবে। দ্বিতীয়ত, আমাদের দৈনন্দিন জীবনে পরিবেশ বান্ধব অভ্যাস গড়ে তুলতে হবে। যেমন - প্লাস্টিক ব্যাগের ব্যবহার কমানো, পানি ও বিদ্যুৎ অপচয় রোধ করা, গাছ লাগানো ইত্যাদি।</p>
+                        
+                        <p>তৃতীয়ত, সরকারকে পরিবেশ সংরক্ষণে কঠোর আইন প্রণয়ন করতে হবে এবং সেই আইন কার্যকর করতে হবে। চতুর্থত, শিল্প কারখানাগুলোকে পরিবেশ বান্ধব প্রযুক্তি ব্যবহার করতে হবে। পঞ্চমত, নবায়নযোগ্য শক্তির ব্যবহার বাড়াতে হবে।</p>
+                        
+                        <p>পরিবেশ সংরক্ষণ শুধু সরকার বা কোনো নির্দিষ্ট সংস্থার দায়িত্ব নয়, এটি আমাদের সবার দায়িত্ব। আমরা যদি সবাই মিলে কাজ করি, তাহলে আমরা আমাদের পরিবেশকে রক্ষা করতে পারব এবং আমাদের ভবিষ্যৎ প্রজন্মের জন্য একটি সুন্দর পৃথিবী রেখে যেতে পারব।</p>
+                        
+                        <p>আমি আশা করি, আমরা সবাই পরিবেশ সংরক্ষণের গুরুত্ব বুঝব এবং এই কাজে নিজেদের অবদান রাখব। কারণ, পরিবেশ রক্ষা করা মানে আমাদের নিজেদের রক্ষা করা।</p>
+                    </div>
+                    <a href="#" class="back-link" onclick="showPage('blog')"><i class="fas fa-arrow-left"></i> ব্লগে ফিরে যান</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div id="post4" class="page blog-post-content">
+        <section>
+            <div class="container">
+                <div class="blog-post">
+                    <div class="post-header">
+                        <h1 class="post-title">স্বাস্থ্য সেবা: সবার জন্য সুলভ স্বাস্থ্যসেবা</h1>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> ০৫ মার্চ, ২০২৩</span>
+                            <span><i class="far fa-user"></i> মোশাহিদ আনসারী</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd59a0c3a9a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="স্বাস্থ্য সেবা" class="post-img">
+                    <div class="post-content">
+                        <p>স্বাস্থ্য মানুষের মৌলিক অধিকার। প্রতিটি মানুষের সুলভ স্বাস্থ্যসেবা পাওয়ার অধিকার রয়েছে। কিন্তু বাস্তবতা হল, বিশ্বের অনেক দেশেই, বিশেষ করে উন্নয়নশীল দেশগুলোতে, সবাই সমানভাবে স্বাস্থ্যসেবা পায় না। বাংলাদেশও এর ব্যতিক্রম নয়।</p>
+                        
+                        <p>বাংলাদেশে স্বাস্থ্যসেবার অবস্থা সম্পর্কে আলোচনা করতে গেলে আমাদের প্রথমেই বলতে হবে যে, গত কয়েক দশকে স্বাস্থ্যসেবার উন্নতি হয়েছে। শিশু মৃত্যুর হার কমেছে, গড় আয়ু বেড়েছে, বিভিন্ন রোগের টিকা সবার জন্য উন্মুক্ত করা হয়েছে। এগুলো নিঃসন্দেহে ইতিবাচক দিক।</p>
+                        
+                        <p>কিন্তু এর পরেও, বাংলাদেশে স্বাস্থ্যসেবার অবস্থা এখনও সন্তোষজনক নয়। বিশেষ করে গ্রামাঞ্চলে স্বাস্থ্যসেবার অবস্থা খুবই খারাপ। অনেক গ্রামে হাসপাতাল নেই, ডাক্তার নেই, ওষুধ নেই। ফলে গ্রামের মানুষকে স্বাস্থ্যসেবা পেতে অনেক দূর যেতে হয়, অনেক সময় তারা সঠিক চিকিৎসা পায় না।</p>
+                        
+                        <p>আমি গত বছর বাংলাদেশের কয়েকটি গ্রাম ঘুরে দেখেছি। সেখানে দেখেছি, অনেক গ্রামে স্বাস্থ্য কেন্দ্র আছে কিন্তু ডাক্তার নেই। কোথাও ডাক্তার আছে কিন্তু ওষুধ নেই। কোথাও স্বাস্থ্য কেন্দ্র আছে কিন্তু সেটি এতটাই জরাজীর্ণ যে সেখানে চিকিৎসা দেওয়া অসম্ভব। এসব সমস্যার কারণে গ্রামের মানুষ প্রায়ই অসুস্থ হলে গ্রাম্য চিকিৎসকের কাছে যায়, যারা প্রায়ই অপ্রশিক্ষিত এবং যাদের চিকিৎসা পদ্ধতি অনেক সময় ক্ষতিকর হতে পারে।</p>
+                        
+                        <p>আবার, শহরাঞ্চলে স্বাস্থ্যসেবার অবস্থা তুলনামূলকভাবে ভালো হলেও, সেখানেও অনেক সমস্যা রয়েছে। শহরে হাসপাতাল ও ডাক্তার থাকলেও, সেগুলো প্রায়ই ব্যয়বহুল, যা সাধারণ মানুষের নাগালের বাইরে। সরকারি হাসপাতালগুলোতে রোগীর চাপ বেশি, ফলে সেখানে সঠিক চিকিৎসা পাওয়া কঠিন। এছাড়া, অনেক হাসপাতালে আধুনিক যন্ত্রপাতি নেই, যা জটিল রোগের চিকিৎসা করা কঠিন করে তোলে।</p>
+                        
+                        <p>তাহলে, আমরা কীভাবে এই সমস্যাগুলো সমাধান করতে পারি? প্রথমত, সরকারকে স্বাস্থ্য খাতে বরাদ্দ বাড়াতে হবে। দ্বিতীয়ত, গ্রামাঞ্চলে আরও স্বাস্থ্য কেন্দ্র স্থাপন করতে হবে এবং সেগুলোতে যোগ্য ডাক্তার ও ওষুধ সরবরাহ নিশ্চিত করতে হবে। তৃতীয়ত, স্বাস্থ্য বীমা চালু করতে হবে, যাতে সবাই সাশ্রয়ী মূল্যে স্বাস্থ্যসেবা পেতে পারে।</p>
+                        
+                        <p>চতুর্থত, স্বাস্থ্য সচেতনতা বাড়াতে হবে। অনেক রোগ প্রতিরোধযোগ্য, যেমন - ডায়রিয়া, ডেঙ্গু, ম্যালেরিয়া ইত্যাদি। এসব রোগ প্রতিরোধে সচেতনতা বাড়ালে রোগের প্রকোপ কমবে, ফলে স্বাস্থ্যসেবার চাপও কমবে।</p>
+                        
+                        <p>পঞ্চমত, টেলিমেডিসিন সেবা চালু করতে হবে, বিশেষ করে গ্রামাঞ্চলে। এর মাধ্যমে গ্রামের মানুষ ঘরে বসেই ডাক্তারের পরামর্শ পেতে পারবে, যা তাদের সময় ও অর্থ বাঁচাবে।</p>
+                        
+                        <p>সবার জন্য সুলভ স্বাস্থ্যসেবা নিশ্চিত করা শুধু সরকারের দায়িত্ব নয়, এটি আমাদের সবার দায়িত্ব। সরকার, বেসরকারি সংস্থা, এবং সাধারণ মানুষ - সবাইকে মিলে কাজ করতে হবে এই লক্ষ্য অর্জনে। আমি আশা করি, আমরা সবাই মিলে একদিন এমন একটি বাংলাদেশ গড়ে তুলব যেখানে প্রতিটি মানুষ সহজেই স্বাস্থ্যসেবা পাবে, কেউ চিকিৎসার অভাবে মারা যাবে না।</p>
+                    </div>
+                    <a href="#" class="back-link" onclick="showPage('blog')"><i class="fas fa-arrow-left"></i> ব্লগে ফিরে যান</a>
+                </div>
+            </div>
+        </section>
+    </div>
